@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("specific_punjabi.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.popup {
+    position: fixed;
+    width: 20vw;
+    height: 90vh;
+    top: 50%;
+    right: 3%;
+    background-color: #44b2d9;
+    color: #010006;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+        </style>
+    </head>
+<body>
+ <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">PUNJABI</h1>
+            <!-- <a href="#food-menu" class="btn btn-primary">Menu</a> -->
+        </div>
+    </section>
+
+    <script>
+        var total = 0;
+        function addCart(name,price){
+            total += price;
+            var popupTab = document.querySelector('.popup');
+            var div = document.createElement("div");
+            var span1 = document.createElement("div");
+            var br = document.createElement("br");
+            span1.classList.add('name');
+            span1.innerHTML = "Name of dish is :"+name;
+            var span2 = document.createElement("div");
+            span2.innerHTML = "Price of dish is :"+price;
+            span1.classList.add('price');
+            div.append(span1);
+            div.append(span2);
+            div.append(br);
+            popupTab.append(div);
+            var Price = document.querySelector('.TotalPrice');
+            Price.innerHTML = total;
+        }
+        function confirmOrder(){
+            alert("Your Order has been confirmed");
+        }
+    </script>
+    <div class="popup">
+        <div>
+            <span><b>Total : </b></span>
+            <span class="TotalPrice"></span>
+        </div><br>
+        <div>
+            <button style="background-color:#010006; color:#f2f8f2;" onclick=\]>Confirm Order</button>
+        </div><br>
+    </div>
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="panner_butter_masala.jpg" alt ="panner_butter_masala" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;" onclick="window.location.href='punjabi.html'"> <h4>Panner Butter Masala</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 150  </span><button onclick="addCart('Panner Butter Masala',150)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="panner_kadai.jpg" alt="panner_kadai" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='punjabi.html'"> <h4>Paneer Kadai</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 160  </span><button onclick="addCart('Panner Kadai',160)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="panner_tufani.jpg" alt="panner_tufani" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='punjabi.html'"> <h4>Paneer Tufani</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 160  </span><button onclick="addCart('Panner Tufani',160)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="palak_paneer.jpg" alt ="palak_paneer" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;" onclick="window.location.href='punjabi.html'"> <h4>Palak Paneer</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 170  </span><button onclick="addCart('Palak Panner',170)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="kaju_butter_masala.jpg" alt="panner_kadai" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='punjabi.html'"> <h4>Kaju Butter Masala</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 200  </span><button onclick="addCart('Kaju Butter Masala',200)">Add to cart</button></div></td>
+     
+                  
+          <div class="column">
+            <td> <img src="Kaju_Paneer_Masala.jpg" alt="panner_tufani" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='punjabi.html'"> <h4>Kaju Pneer MAsala</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 200  </span><button onclick="addCart('Kaju Panner Masala',200)">Add to cart</button></div></td>
+
+        </div>
+    </table>
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="butter_roti.jpg" alt ="panner_butter_masala" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;" onclick="window.location.href='punjabi.html'"> <h4>Butter Roti</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 15  </span><button onclick="addCart('Butter Roti',15)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="kulcha.jpg" alt="panner_kadai" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='punjabi.html'"> <h4>Kulcha</h4> </button></button><br><div style="width:50%;margin-left: 30px;"><span>RS. 25  </span><button onclick="addCart('Kulcha',25)">Add to cart</button></div></td>
+     
+                  
+          <div class="column">
+            <td> <img src="butter_kulcha.jpg" alt="panner_tufani" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='punjabi.html'"> <h4>Butter Kulcha</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 35  </span><button onclick="addCart('Butter Kulcha',180)">Add to cart</button></div></td>
+
+        </div>
+    </table>
+
+
+
+</body>
+</html>

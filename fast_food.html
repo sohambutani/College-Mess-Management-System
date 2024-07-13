@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("specific_fast_food.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.popup {
+    position: fixed;
+    width: 20vw;
+    height: 90vh;
+    top: 50%;
+    right: 3%;
+    background-color: #44b2d9;
+    color: #010006;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+
+
+        </style>
+    </head>
+<body>
+ <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Fast Fooooood:)</h1>
+            <!-- <a href="#food-menu" class="btn btn-primary">Menu</a> -->
+        </div>
+    </section>
+    <script>
+        var total = 0;
+        function addCart(name,price){
+            total += price;
+            var popupTab = document.querySelector('.popup');
+            var div = document.createElement("div");
+            var span1 = document.createElement("div");
+            var br = document.createElement("br");
+            span1.classList.add('name');
+            span1.innerHTML = "Name of dish is :"+name;
+            var span2 = document.createElement("div");
+            span2.innerHTML = "Price of dish is :"+price;
+            span1.classList.add('price');
+            div.append(span1);
+            div.append(span2);
+            div.append(br);
+            popupTab.append(div);
+            var Price = document.querySelector('.TotalPrice');
+            Price.innerHTML = total;
+        }
+        function confirmOrder(){
+            alert("Your Order has been confirmed");
+        }
+    </script>
+    <div class="popup">
+        <div>
+            <span><b>Total : </b></span>
+            <span class="TotalPrice"></span>
+        </div><br>
+        <div>
+            <button style="background-color:#010006; color:#f2f8f2;" onclick="window.location.href='payment.html'">Confirm Order</button>
+        </div><br>
+    </div>
+
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="veg_sandwich.jpg" alt ="panner_butter_masala" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Veg Sandwich</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 70  </span><button onclick="addCart('Veg Sandwich',70)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="veg_cheese_grilled_sandwich.jpg" alt="panner_kadai" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Veg Cheese grilled Sandwich</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 100  </span><button onclick="addCart('Veg Cheese grilled Sandwich',100)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="cheese_chilli_sandwich.jpg" alt="panner_tufani" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Cheese Chilli </h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 80  </span><button onclick="addCart('Cheese Chilli',80)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="cheese_burger.jpg".jpg" alt ="panner_butter_masala" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Cheese Burger</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 120  </span><button onclick="addCart('Cheese Burger',120)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="hot_dog.jpg" alt="panner_kadai" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Hot Dog</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 100  </span><button onclick="addCart('Hot Dog',100)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="frankie.jpg" alt="panner_tufani" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Frankie</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 80  </span><button onclick="addCart('Frankie',80)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="cheese_vadapav.jpg" alt ="panner_butter_masala" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;"onclick="window.location.href='fast_food.html'" > <h4>Cheese Vada Pav</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 35  </span><button onclick="addCart('Cheese Vada Pav',35)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="pani_puri.jpg" alt="panner_kadai" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Pani Puri</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 30  </span><button onclick="addCart('Pani Puri',30)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="fries.jpg".jpg" alt="panner_tufani" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='fast_food.html'"> <h4>Fries</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 60  </span><button onclick="addCart('Fries',60)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+
+
+</body>
+</html>

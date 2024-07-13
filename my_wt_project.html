@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .column {
+        float: center;
+        width: 66.33%;
+        padding: 35px;
+
+      }
+
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      td button {
+        margin-left: 15px;
+      }
+      /* .bg-img { */
+        /* position: fixed; */
+        /* top: 0; */
+        /* left: 0; */
+        /* z-index: -1; */
+        /* width: 100vw; */
+        /* height: 100vh; */
+      /* } */
+      /* .bg-img img{ */
+        /* width: 100%; */
+        /* height: 100%; */
+      /* } */
+      .row{
+        border-radius: 35px;
+
+      }
+      
+      .column{
+        border-radius: 35px;
+
+      }
+
+      
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("homepage_starting_photo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    height: 60px;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 3.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+ 
+}
+
+#contact {
+  margin-top: 50px;
+}
+#contact .box {
+  margin-top: 30px;
+}
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  order: 1;
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.center {
+    text-align: center;
+}
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="bg-img"> -->
+        <!-- <img src="background123.jpg" alt=""> -->
+    <!-- </div> -->
+  
+    <nav Class="navbar">
+      <ul class="menu-items">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+        <h2 class="logo">FOOD COURT</h2>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Eat Right Food</h1>
+            <p><h4>Eat Healty, it is good for our health.</h4></p>
+           
+        </div>
+    </section>
+
+<table style="margin: auto;">
+    <div class="row" style="margin">
+
+      <div class="column">
+              <td><img src="punjabi.jpg" alt ="Punjabi" width="400" height="400" style="border-radius:15px; margin-right: 85px;"><br>
+      </div>
+             <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 370px; cursor: pointer;" onclick="window.location.href='punjabi.html'"> <h3><b>Punjabi...</b></h3> </button></td>
+
+
+      <div class="column">
+              <td> <img src="gujarati.jpg" alt="Gujarati" width="400" height="400" style="border-radius:15px;margin-right: 85px;"><br>
+      </div>
+              <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 370px ;cursor: pointer; "onclick="window.location.href='gujarati.html'"> <b><h3>Gujarati...</b></h3> </button></td>
+ 
+    </div>
+</table>
+
+<table style="margin: auto;">
+    <div class="row">
+
+      <div class="column">
+               <td><img src="south indian.jpg" alt="South Indian" width="400" height="400" style="border-radius:15px;margin-right: 85px;"><br>
+      </div>
+               <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 370px; cursor: pointer; "onclick="window.location.href='southindian.html'"> <h3><b>South indian...</b></h3> </button></td>
+
+      <div class="column">
+               <td>  <img src="italian.jpg" alt="Italian" width="400" height="400" style="border-radius:15px;margin-right: 85px;"><br>
+      </div>
+               <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 370px; cursor: pointer;"onclick="window.location.href='italian.html'"> <b><h3>Italian...</b></h3> </button></td>
+
+         </div>
+</table>
+
+<table style="margin:auto;">
+<div class="row">
+
+      <div class="column">
+                <td> <img src="chinese.jpg" alt="Chinese" width="400" height="400" style="border-radius:15px;margin-right: 85px;"><br>
+      </div>
+                <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 370px ;cursor: pointer;"onclick="window.location.href='chinese.html'"> <b><h3>Chinese...</b></h3> </button></td>
+
+      <div class="column">
+                <td>  <img src="fast food.jpg" alt="Fast Food" width="400" height="400" style="border-radius:15px;margin-right: 85px;"><br>
+      </div>
+                <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 370px; cursor: pointer;"onclick="window.location.href='fast_food.html'"> <b><h3>Fast Food...</b></h3> </button></td>
+       
+    </div>
+</table>
+<section id="contact" >
+<center>
+    <b><h1>Contact Option</h1></b>
+</center>
+</div>
+<div class="box">
+      <div class="contact">
+    <center><img src="email.jpg" width="50" height="50"  ></center>
+                    
+                    <p class="center">
+                        Email : <b>jacksparrow@gmail.com</b><br>
+                       <br> use this Email to send us about the problem faces
+
+                    </p>
+     </div>
+     <div class="box">
+     <div class="contact">
+        <center><img src="contact.jpg " width="50" height="50"></center>
+
+             <p class="center">
+                 Toll free Number:<b>+0281 202 303 404</b>
+             </p>
+</div>
+     
+</section>
+
+  </body>
+</html>

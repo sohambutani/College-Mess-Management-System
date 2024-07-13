@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("specific_gujarati.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.popup {
+    position: fixed;
+    width: 20vw;
+    height: 90vh;
+    top: 50%;
+    right: 3%;
+    background-color: #44b2d9;
+    color: #010006;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+
+
+        </style>
+    </head>
+<body>
+ <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">GUJARATI</h1>
+            <!-- <a href="#food-menu" class="btn btn-primary">Menu</a> -->
+        </div>
+    </section>
+
+    
+    <script>
+        var total = 0;
+        function addCart(name,price){
+            total += price;
+            var popupTab = document.querySelector('.popup');
+            var div = document.createElement("div");
+            var span1 = document.createElement("div");
+            var br = document.createElement("br");
+            span1.classList.add('name');
+            span1.innerHTML = "Name of dish is :"+name;
+            var span2 = document.createElement("div");
+            span2.innerHTML = "Price of dish is :"+price;
+            span1.classList.add('price');
+            div.append(span1);
+            div.append(span2);
+            div.append(br);
+            popupTab.append(div);
+            var Price = document.querySelector('.TotalPrice');
+            Price.innerHTML = total;
+        }
+        function confirmOrder(){
+            alert("Your Order has been confirmed");
+        }
+    </script>
+    <div class="popup">
+        <div>
+            <span><b>Total : </b></span>
+            <span class="TotalPrice"></span>
+        </div><br>
+        <div>
+            <button style="background-color:#010006; color:#f2f8f2;" onclick="window.location.href='payment.html'">Confirm Order</button>
+        </div><br>
+    </div>
+
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="sev_tameta.jpg" alt ="sev_tameta" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Sev Tameta</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 90  </span><button onclick="addCart('Sev Tameta',90)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="potato.jpg" alt="potato" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Potato</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 90  </span><button onclick="addCart('Potato',90)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="undhiyu.jpg" alt="undhiyu" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Undhiyu</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 100 </span><button onclick="addCart('Undhiyu',100)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="binda.jpg" alt ="binda" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Bhinda</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 90  </span><button onclick="addCart('Bhinda',90)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="mix_vegetable.jpg" alt="mix_vegetable" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Mix Vegetable</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 100  </span><button onclick="addCart('Mix Vegetable',100)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="thepla_sukibhaji.jpg" alt="thepla_sukibhaji" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Thepla Sukibhaji</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 60  </span><button onclick="addCart('Thepla Sukibhaji',60)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+    <table style="margin: auto;">
+        <div class="row" style="margin">
+    
+          <div class="column">
+                  <td><img src="dal_bhat.jpg" alt ="dal_bhat" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                 <button  style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px; cursor: pointer;" onclick="window.location.href='gujarati.html'"> <h4>Dal Rice</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 50  </span><button onclick="addCart('Dal Rice',50)">Add to cart</button></div></td><br>
+
+                 <!-- <td><button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"> <h4>Rs. 150.00</h4> </button></td> -->
+    
+          <div class="column">
+                  <td> <img src="phulka_roti.jpg" alt="phulka_roti" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+          </div>
+                  <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Phulka Roti</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 10  </span><button onclick="addCart('Phulka Roti',10)">Add to cart</button></div></td><br>
+     
+                  
+          <div class="column">
+            <td> <img src="masala_chaas.jpg" alt="masala_chaas" width="210" height="210" style="border-radius:475px; margin-right: 85px;"><br>
+    </div>
+            <button style="background-color:#333333; color:#f2f8f2; border-radius:5px; height: 40px; width: 170px ;cursor: pointer;"onclick="window.location.href='gujarati.html'"> <h4>Masala Chaas</h4> </button><br><div style="width:50%;margin-left: 30px;"><span>RS. 15  </span><button onclick="addCart('Masala Chaas',15)">Add to cart</button></div></td><br>
+
+        </div>
+    </table>
+
+
+
+</body>
+</html>
